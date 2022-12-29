@@ -1,6 +1,6 @@
 #include <netinet/in.h> //sockaddr_in
 #include <sys/socket.h> //socket bind listen accept
-#include <unistd.h>     //close
+#include <unistd.h>     //close read write
 #include <string.h>     //memset
 #include <stdio.h>      //printf
 
