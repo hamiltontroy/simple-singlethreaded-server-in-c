@@ -88,17 +88,17 @@ int main(void)
             continue;
         }
         
-        byteCount = recv(clientSocket, recvBuffer, sizeof(recvBuffer), 0);
+        byteCount = read(clientSocket, recvBuffer, sizeof(recvBuffer));
         if(byteCount == -1)
         {
-            printError("recv", __FILE__, __LINE__);
+            printError("read", __FILE__, __LINE__);
             continue;
         }
         
         recvBuffer[byteCount] = '\0';
         printf("%s\n", recvBuffer);
 
-        byteCount = send(clientSocket, sendString, replyLength, 0);
+        byteCount = write(clientSocket, sendString, replyLength);
         if(byteCount < replyLength)
         {
             printError("send", __FILE__, __LINE__);
