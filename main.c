@@ -101,7 +101,7 @@ int main(void)
         byteCount = write(clientSocket, sendString, replyLength);
         if(byteCount < replyLength)
         {
-            printError("send", __FILE__, __LINE__);
+            printError("write", __FILE__, __LINE__);
             continue;
         }
     }
